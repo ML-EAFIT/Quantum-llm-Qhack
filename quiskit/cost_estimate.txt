@@ -1,0 +1,31 @@
+
+══ What one shot costs in time ══════════════════════════════
+  Device model         : fake_kingston (IBM Heron, 156 qubits)
+  Compiled circuit     : 18 two-qubit gates, 4.3 µs incl. readout
+  Reset between shots  : 250 µs (rep_delay)
+  Shots per circuit    : 4096  (error of each <Z> ≈ ±0.016)
+
+══ 1. Train on the simulator (recommended) ══════════════════
+  QPU time 0 min  →  $0   (4 qubits simulate instantly on a laptop)
+
+══ 2. Run the trained model on a REAL IBM quantum computer ══
+  Vocabulary: 61 characters → 61 circuits, 1 job, any amount of text
+  QPU time 1.09 min  →  Open Plan: FREE (fits in 10 free min/month)  |  Pay-As-You-Go: $105
+  (Naive way, re-running 16 circuits per character like the PennyLane script:
+   120 chars = 37.3 min = $3,584 Pay-As-You-Go)
+
+══ 3. TRAIN on a REAL IBM quantum computer ══════════════════
+  Per step: ~284 distinct token inputs × 17 circuits (parameter shift) = 4,829 circuits, 4 job(s)
+  Per step QPU time: 84.0 min  ($8,060 Pay-As-You-Go)
+  300 steps: 25,189 QPU-minutes = 420 hours of QPU time
+    Pay-As-You-Go $96/min : $2,418,141
+    Flex          $72/min : $1,813,606
+    Premium       $48/min : $1,209,070
+    Open Plan (free)      : would take 210 years of free minutes
+
+── Training cost vs shots (Pay-As-You-Go) ──
+   4096 shots (±0.016): train    25,189 min =   $2,418,141   |   inference 1.09 min = $105
+   1024 shots (±0.031): train     6,297 min =     $604,535   |   inference 0.30 min = $29
+    256 shots (±0.062): train     1,582 min =     $151,854   |   inference 0.10 min = $9.55
+     64 shots (±0.125): train       403 min =      $38,683   |   inference 0.05 min = $4.79
+
